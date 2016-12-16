@@ -20,7 +20,7 @@
 				<img src="{{event.image_url}}">
 
 				<h2>{{event.title}}</h2>
-				<p>{{event.start_at.__text}}</p>
+				<p>{{event.start_at.__text | date}}</p>
 				<p>{{event.address}}, {{event.city}}</p>
 
 			</div>

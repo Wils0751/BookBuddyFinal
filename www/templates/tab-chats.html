@@ -1,4 +1,4 @@
-<ion-view view-title="Chats">
+<ion-view view-title="Search">
 	<ion-content>
 <!--
 		<div class="list list-inset" style="padding-top:">
@@ -22,7 +22,7 @@
 		<div class="list">
 
         <a ng-repeat="item in results" 
-           class="item item-thumbnail-left"  ui-sref="tab.chat-detail({itemid: item.best_book.id.__text}) ">
+           class="item item-thumbnail-left"  ui-sref="tab.search-detail({itemid: item.best_book.id.__text}) ">
 
           <img ng-src="{{ item.best_book.small_image_url}}">
           <h2>{{ item.best_book.title }}</h2>
