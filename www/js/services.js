@@ -1,14 +1,13 @@
 angular.module('starter.services', [])
 
 .factory('Chats', function BooksFactory($http) {
-			// Might use a resource here that returns a JSON array
 var url;
 var URL = "https://www.goodreads.com";
+var local = "httpL//localhost:8100";
 var apiKey ="cg3KXsrtKTw309wMfi1Amw";
-//var callbackName = 'JSON_CALLBACK';
+
 var title = title;
 
-			// Some fake testing data
 			return {
 				search: function (search) {
 					url = URL + "/search/index.xml";
@@ -23,7 +22,6 @@ var title = title;
 						},
 						transformResponse: function (search) {
                 			var x2js = new X2JS({});
-//							$scope.test = value.toString();
                 			var response = angular.bind(x2js, x2js.xml_str2json, search)();
                 			return response;
 							}
@@ -56,7 +54,6 @@ var apiKey ="cg3KXsrtKTw309wMfi1Amw";
 						},
 						transformResponse: function (search) {
                 			var x2js = new X2JS({});
-//							$scope.test = value.toString();
                 			var response = angular.bind(x2js, x2js.xml_str2json, search)();
                 			return response;
 							}
@@ -83,7 +80,6 @@ var country = 'CA';
 				},
 				transformResponse: function (search) {
                 			var x2js = new X2JS({});
-//							$scope.test = value.toString();
                 			var response = angular.bind(x2js, x2js.xml_str2json, search)();
                 			return response;
 							}
